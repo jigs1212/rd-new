@@ -1,0 +1,258 @@
+<article class="architecture mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="img/homeimg/2dfloor.jpg" alt="" />
+        <a href="2d-floor-plan.php">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">2D Floor Plan/h2>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="buildings mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/11.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Empty street</h2>
+                    <h6 class="extra-descript">Buildings</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="bridges mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/12.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Metal grid</h2>
+                    <h6 class="extra-descript">Bridges</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="architecture mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/13.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Modern architecture</h2>
+                    <h6 class="extra-descript">Architecture</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="architecture mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/14.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Rendering</h2>
+                    <h6 class="extra-descript">Architecture</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="architecture mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/15.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Office building</h2>
+                    <h6 class="extra-descript">Architecture</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="buildings mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/16.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Foot bridge</h2>
+                    <h6 class="extra-descript">Buildings</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="buildings mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/17.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Engineer building</h2>
+                    <h6 class="extra-descript">Buildings</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="buildings mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/18.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Buildings</h2>
+                    <h6 class="extra-descript">Buildings</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>
+
+<article class="buildings mix mix_all">
+
+    <div class="work-item-move slideUp3x lazy-image img">
+        <div class="lazy">
+            <i class="G G_1"></i>
+            <i class="G G_2"></i>
+            <i class="G G_3"></i>
+            <i class="G G_4"></i>
+            <i class="G G_5"></i>
+            <i class="G G_6"></i>
+            <i class="G G_7"></i>
+            <i class="G G_8"></i>
+        </div>
+        <img src="images/portfolio/19.jpg" alt="" />
+        <a href="#">
+            <div class="image-extra">
+                <div class="extra-content">
+                    <h2 class="extra-title">Night city</h2>
+                    <h6 class="extra-descript">Buildings</h6>
+                </div><!--/ .extra-content-->
+            </div><!--/ .image-extra-->
+        </a>
+    </div><!--/ .work-item-move-->
+
+</article>

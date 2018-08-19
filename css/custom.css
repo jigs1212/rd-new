@@ -1,0 +1,22 @@
+#logo {
+  display: inline-flex;
+}
+#logo .logo {
+  height: 60px;
+}
+#logo .logo1 {
+  height: 100px;
+  width: 125px;
+}
+#logo .logo2 {
+  height: 75px;
+  width: 350px;
+  margin-top: 30px;
+}
+.middle-header-line {
+  padding: 2px 0 !important;
+}
+.sequence-prev,
+.sequence-next {
+  z-index: 10;
+}

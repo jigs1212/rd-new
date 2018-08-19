@@ -1,0 +1,667 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Modern Slide In
+Version: 1.3
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/modern-slide-in/
+
+This is a FREE theme and is available under a MIT License:
+http://www.opensource.org/licenses/mit-license.php
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+*/
+/* CSS RESET - http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* !CSS RESET */
+/* prefix declarations */
+/* THEME STYLES */
+.sequence-parallax { background-color: transparent;}
+
+#sequence {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	min-width: 100%;
+	min-height: 100%;
+	color: white;
+	font-size: 0.625em;
+	margin: 0 auto;
+	background-color: #000;
+}
+
+	#sequence > .sequence-canvas {
+		height: 100%;
+		width: 100%;
+	}
+
+		#sequence > .sequence-canvas > li {
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			position: absolute;
+		}
+
+		#sequence > .sequence-canvas li > * {
+			position: absolute;
+
+			-webkit-transition-timing-function: ease-in-out;
+					transition-timing-function: ease-in-out;
+		}
+		
+		
+/*	Preloader  */		
+#sequence .sequence-preloader {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 999999;
+}
+
+@keyframes preload {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#sequence .sequence-preloader .preloading .circle {
+    fill: #fff;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    top: -50%;
+    width: 12px;
+    animation: preload 1s infinite;
+}
+
+#sequence .preloading {
+    display: block;
+    height: 12px;
+    margin: 0 auto;
+    top: 50%;
+    margin-top: -6px;
+    position: relative;
+    width: 48px;
+}
+
+#sequence .sequence-preloader .preloading .circle:nth-child(2) {
+    animation-delay: .15s;
+}
+
+#sequence .sequence-preloader .preloading .circle:nth-child(3) {
+    animation-delay: .3s;
+}
+
+#sequence .preloading-complete {
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 2s;
+}
+
+#sequence div.inline{
+    background-color: #fff;
+    margin-right: 4px;
+    float: left;
+}
+/*	end preloader  */
+		
+/*-------------------------------------------------*/
+/*      Sequence control buttons						
+/*-------------------------------------------------*/
+
+ .sequence-prev,
+ .sequence-next {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: block;
+	margin-top: -25px;
+	width: 30px;
+	height: 30px;
+	font-size: 0;
+	cursor: pointer;
+	text-align: center;
+
+	-webkit-transition: all .30s ease-in-out;
+			transition: all .30s ease-in-out;
+}
+
+	.sequence-prev { left: 60px; }
+	.sequence-next { right: 60px; }
+
+	.sequence-prev:after,
+	.sequence-next:after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		text-align: center;
+		font-size: 70px;
+		font-family: 'fontello';
+		line-height: 1.4em;
+		opacity: .5;
+		
+		-webkit-transition-duration: 1s;
+				transition-duration: 1s;
+	}
+        
+        .sequence-prev:after { content: "\ea03"; }
+        .sequence-next:after { content: "\ea04"; }
+
+		.sequence-next:hover:after,
+		.sequence-prev:hover:after {
+			opacity: 1;
+
+			-webkit-transition-duration: .5s;
+					transition-duration: .5s;
+		}
+
+/*-------------------------------------------------*/
+/*      Sequence slides				   
+/*-------------------------------------------------*/
+
+.slide-title,
+.slide-text,
+.slide-button {
+    display: block;
+    text-align: center;
+}
+
+#sequence .bg-animation { 
+    top: 0;
+    opacity: 0;
+    vertical-align: middle;
+    z-index: 1;
+    
+    -webkit-transition-property: opacity;
+            transition-property: opacity;
+     -webkit-transition-duration: 2.2s;
+            transition-duration: 2.2s;
+}
+
+	#sequence .animate-in .bg-animation {
+		top: 0;
+		opacity: 1;
+		z-index: 1;
+
+		-webkit-transition-property: opacity;
+				transition-property: opacity;
+		-webkit-transition-duration: 2.2s;
+				transition-duration: 2.2s;
+	}
+
+	#sequence .animate-out .bg-animation {
+		top: 0;
+		opacity: 0;
+		z-index: 2;
+
+		-webkit-transition-property: opacity;
+				transition-property: opacity;
+		-webkit-transition-duration: 2.2s;
+				transition-duration: 2.2s;
+		-webkit-transition-delay: 2s;
+				transition-delay: 2s;
+	}
+
+	/*-------------------------------------------------*/
+	/* Slider background 						      
+	/*-------------------------------------------------*/
+
+	#sequence .slide-bg {
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%; 
+		position: absolute;
+		background-attachment: fixed;
+		filter: alpha(opacity = 50);
+		opacity: .5;
+	}
+
+	/*-------------------------------------------------*/
+	/* Slider content 						           
+	/*-------------------------------------------------*/
+			
+	#sequence .slide-title {
+		font-size: 80px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: "Lato", sans-serif;
+		color: white;
+		width: 100%;
+		opacity: 0;
+
+		-webkit-transform: scale(1);
+				transform: scale(1);
+		-webkit-transition-duration: 1.8s;
+				transition-duration: 1.8s;
+	}
+
+		#sequence .animate-in .slide-title {
+			opacity: 1;
+
+			-webkit-transform: scale(1.2);
+					transform: scale(1.2);
+			-webkit-transition-duration: 1.8s;
+					transition-duration: 1.8s;
+			-webkit-transition-delay: 2.5s;
+					transition-delay: 2.5s;
+		}
+
+		#sequence .animate-out .slide-title {
+			opacity: 0;
+
+			-webkit-transition-duration: 0.8s;
+					transition-duration: 0.8s;
+			-webkit-transition-delay: 1.8s;
+					transition-delay: 1.8s;
+		}
+
+	#sequence .slide-text {
+		font-family: "Lato",sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+		z-index: 1;
+		opacity: 0;
+		width: 100%;
+		opacity: 0;
+		margin: 5px 0;
+	}
+
+		#sequence .animate-in .slide-text {
+			opacity: 1;
+			z-index: 1;
+
+			-webkit-transition-duration: 1.5s;
+					transition-duration: 1.5s;
+			-webkit-transition-delay: 2.7s;
+					transition-delay: 2.7s;
+		}
+
+		#sequence .animate-out .slide-text {
+			opacity: 0;
+			z-index: 1;
+
+			-webkit-transition-duration: 0.8s;
+					transition-duration: 0.8s;
+			-webkit-transition-delay: 1.2s;
+					transition-delay: 1.2s;
+		}
+
+	#sequence .slide-button {
+		width: auto;
+		opacity: 0;
+		display: inline-block;
+		text-align: center;
+		margin-top: 55px;
+		z-index: 1;
+
+		-webkit-transition-property: opacity top;
+				transition-property: opacity top;
+		-webkit-transition-duration: 1.7s;
+				transition-duration: 1.7s;
+	}
+
+		#sequence .animate-in .slide-button {
+			opacity: 1;
+			z-index: 1;
+
+			-webkit-transition-duration: 1.7s;
+					transition-duration: 1.7s;
+			-webkit-transition-delay: 3.2s;
+					transition-delay: 3.2s;
+		}
+
+		#sequence .animate-out .slide-button {
+			opacity: 0;
+			z-index: 1;
+
+			-webkit-transition-duration: 1.2s;
+					transition-duration: 1.2s;
+			-webkit-transition-delay: .8s;
+					transition-delay: .8s;
+		}
+                
+        /* ---------------------------------------------------------------------- */
+        /*      Sequence custom slides content
+        /* ---------------------------------------------------------------------- */
+
+        #sequence .sequence-canvas li .slide-title p { 
+			line-height: 1.1em;
+			margin: 0;
+		}
+
+		#sequence .sequence-canvas li .slide-title span { color: #ffd200; }
+
+		.sequence-canvas li .slide-text {
+			font-size: 13px;
+			color: white;
+			font-family: "Lato", sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.sequence-canvas li .btn-cta {
+			border: 2px solid #fff;
+			padding: 14px 23px;
+			color: #ffd200;
+			font-weight: 700;
+			font-family: "Roboto", sans-serif;
+			font-size: 15px;
+			text-transform: uppercase;
+			background-color: transparent;
+
+			-webkit-transition: background-color .35s ease-out, border .35s ease-out, color .35s ease-out;
+					transition: background-color .35s ease-out, border .35s ease-out, color .35s ease-out;
+		}
+
+		.sequence-canvas li .btn-cta:hover,
+		.ls-slide .btn-cta a:hover {
+			background-color: #ffd200;
+			color: #000;
+			border-color: #ffd200;
+		}
+		
+		.sequence-container { 
+				display: table;
+				width: 100%; 
+				height: 100%;
+				vertical-align: middle;
+            }
+
+				.sequence-entry {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+				}
+
+				.sequence-container > .sequence-entry {
+					position: relative;
+					display: table-cell;
+					margin: auto;
+					vertical-align: middle;
+				}
+				
+				#sequence  .content-animation {
+					position: relative;
+					opacity: 0;
+					
+					-webkit-transition-property: opacity;
+							transition-property: opacity;
+					-webkit-transition-duration: 2.2s;
+							transition-duration: 2.2s;
+					
+				}
+				
+				#sequence  .animate-in .content-animation {
+					opacity: 1;
+					
+					-webkit-transition-property: opacity;
+							transition-property: opacity;
+					-webkit-transition-duration: 2.2s;
+							transition-duration: 2.2s;
+				}
+				
+				#sequence  .animate-in .slide-bg.content-animation { opacity: .5; }
+				
+				#sequence .animate-out .content-animation {
+					opacity: 0;
+					
+					-webkit-transition-property: opacity;
+							transition-property: opacity;
+					-webkit-transition-duration: 2.2s;
+							transition-duration: 2.2s;
+					-webkit-transition-delay: 2.5s;
+							transition-delay: 2.5s;
+				}
+    
+             #sequence .slide-1 .slide-text { 
+				-webkit-transform: translateY(40px);
+						transform: translateY(40px);
+            }
+
+             #sequence .slide-1.animate-in .slide-text {	
+				-webkit-transform: translateY(10px);
+						transform: translateY(10px); 
+            }
+
+             #sequence .slide-1 .slide-button { 
+				-webkit-transform: translateY(60px);
+						transform: translateY(60px);
+            }
+
+             #sequence .slide-1.animate-in .slide-button {
+				-webkit-transform: translateY(0);
+						transform: translateY(0);
+            }
+
+        #sequence .slide-2 .slide-title {
+            border: 2px solid #fff;
+            padding: 10px 30px;
+            font-size: 56px;
+            display: inline-block;
+            width: auto;
+        }
+
+             #sequence .slide-2 .slide-text {
+				margin-bottom: 30px;
+
+				-webkit-transform: scale(.9);
+						transform: scale(.9);
+             }
+
+             #sequence .slide-2.animate-in .slide-text { 
+				margin-bottom: 30px;
+
+				-webkit-transition-delay: 3.2s;
+						transition-delay: 3.2s;
+				-webkit-transform: scale(1.2);
+						transform: scale(1.2);
+             }
+
+             #sequence .slide-2.animate-out .slide-text { 
+				-webkit-transform: scale(.9);
+						transform: scale(.9);
+             }
+
+             #sequence .slide-2 .slide-button { 
+				margin-top: 50px;
+				display: block;
+
+				-webkit-transform: translateY(50px);
+						transform: translateY(50px);
+             }
+
+             #sequence .slide-2.animate-in .slide-button { 
+				margin-top: 50px;
+				display: block;
+
+				-webkit-transform: translateY(0);
+						transform: translateY(0);
+             }
+
+			#sequence .slide-3 .slide-title { font-size: 70px; }
+			.ie8 #sequence .slide-3 .slide-title { font-size: 65px; }
+				
+				#sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 408px; }
+
+            #sequence .slide-3 .slide-text { margin-bottom: 30px;}
+			 
+            #sequence .slide-3.animate-in .slide-text { margin-bottom: 30px;}
+
+            #sequence .slide-3 .slide-button { 
+				-webkit-transform: translateY(50px);
+						transform: translateY(50px);
+            }
+
+            #sequence .slide-3.animate-in .slide-button {
+				-webkit-transform: translateY(0);
+						transform: translateY(0);
+            }
+            
+/*--------------------------------------------------------*/
+/*  Responsive
+/*--------------------------------------------------------*/
+	
+@media screen and (min-width: 1200px) and (max-width: 1367px) {
+	
+	/*------------------------------------------------------------------------*/
+	/*	Sequence slider
+	/*------------------------------------------------------------------------*/
+	
+	#sequence .slide-2 .slide-title { font-size: 50px; }
+	#sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 220px; }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 2600px) {
+	#sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 408px; }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1367px) {
+    
+	#sequence .slide-1.animate-in .slide-text { top: 52%; }
+		
+        #sequence .slide-2 .slide-title { 
+			border: none;
+			font-size: 45px;
+			padding: 11px 110px;
+        }
+
+        #sequence .slide-3 .slide-title { 
+			font-size: 45px;
+			padding: 0 25px;
+        }
+		
+		#sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 130px; }
+}
+
+@media only screen and (max-width: 992px) {
+    
+    #sequence .slide-1 .slide-title { font-size: 53px; }
+
+    #sequence .slide-3 .slide-title { 
+		font-size: 30px;
+		padding: 0 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 180px; }
+	
+}
+
+@media only screen and (max-width: 767px) {
+    
+    #sequence .sequence-prev:after,
+    #sequence .sequence-next:after { color: transparent; }
+	
+	#sequence .sequence-canvas li.slide-3 .slide-title p { padding: 0 5px; }
+	
+	#sequence .slide-text {
+		font-size: 10px;
+		padding: 0 40px;
+    }
+    
+    #sequence .slide-1 .slide-title {
+        font-size: 30px;
+
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px);
+    }
+
+    #sequence .slide-1 .slide-text { 
+		-webkit-transform: translateY(50px);
+				transform: translateY(50px);
+    }
+
+        #sequence .slide-1.animate-in .slide-text {	
+			-webkit-transform: translateY(35px);
+					transform: translateY(35px); 
+        }
+
+    #sequence .slide-2 .slide-title { 
+		margin-top: -30px;
+		font-size: 25px;
+		border: none;
+
+		-webkit-transform: translateY(40px);
+				transform: translateY(40px);
+    }
+
+    #sequence .slide-2 .slide-text {
+		-webkit-transform: translateY(50px);
+				transform: translateY(50px);
+    }
+
+    #sequence .slide-3 .slide-title {
+		-webkit-transform: translateY(40px);
+				transform: translateY(40px);                    
+    }
+
+    #sequence .slide-3 .slide-text {
+		-webkit-transform: translateY(55px);
+				transform: translateY(55px);
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+	#sequence .slide-2 .slide-title { 
+		margin-top: -30px;
+		font-size: 25px;
+		border: none;
+		padding: 11px 100px;
+    }
+}
